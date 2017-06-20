@@ -33,97 +33,143 @@ io.on('connection', function(socket){
 
 //Connexion à l'arduino via le module johnny-five
 var five = require("johnny-five"),
-  board, buttonPin2, buttonPin3, buttonPin4, buttonPin5;
+board, joystickPin2, joystickPin3, joystickPin4, joystickPin5, buttonArcade, buttonRectangle;
 
 board = new five.Board();
 
 board.on("ready", function() {
 
-  // Create a new `buttonPin2` hardware instance.
-  // This example allows the buttonPin2 module to
+  // Create a new `joystickPin2` hardware instance.
+  // This example allows the joystickPin2 module to
   // create a completely default instance
-  buttonPin2 = new five.Button(2);
-  buttonPin3 = new five.Button(3);
-  buttonPin4 = new five.Button(4);
-  buttonPin5 = new five.Button(5);
+  joystickPin2 = new five.Button(2); //joystick pins digita
+  joystickPin3 = new five.Button(3);
+  joystickPin4 = new five.Button(4);
+  joystickPin5 = new five.Button(5);
 
-  // Inject the `buttonPin2` hardware into
+  buttonArcade = new five.Button(6); //Arcade Button
+
+  buttonRectangle = new five.Button(7); //Start Button
+
+  // Inject the `joystickPin2` hardware into
   // the Repl instance's context;
   // allows direct command line access
   board.repl.inject({
-    buttonPin2: buttonPin2
+    joystickPin2: joystickPin2
   });
   board.repl.inject({
-    buttonPin3: buttonPin3
+    joystickPin3: joystickPin3
+  });
+  board.repl.inject({
+    joystickPin4: joystickPin4
+  });
+  board.repl.inject({
+    joystickPin5: joystickPin5
   });
 
   board.repl.inject({
-    buttonPin4: buttonPin4
+    buttonArcade: buttonArcade
   });
 
   board.repl.inject({
-    buttonPin5: buttonPin5
+    buttonRectangle: buttonRectangle
   });
 
 
   // Button Event API
 
-  // "down" the buttonPin2 is pressed
-  buttonPin2.on("down", function() {
+  // "down" the joystickPin2 is pressed
+  joystickPin2.on("down", function() {
     console.log("pin2 : down");
     io.emit("pin2 : down");
   });
-  buttonPin3.on("down", function() {
+  joystickPin3.on("down", function() {
     console.log("pin3 : down");
     io.emit("pin3 : down");
   });
-  buttonPin4.on("down", function() {
+  joystickPin4.on("down", function() {
     console.log("pin4 : down");
     io.emit("pin4 : down");
   });
-  buttonPin5.on("down", function() {
+  joystickPin5.on("down", function() {
     console.log("pin5 : down");
     io.emit("pin5 : down");
   });
 
-  // "hold" the buttonPin2 is pressed for specified time.
+
+  buttonArcade.on("down", function() {
+    console.log("buttonArcade : down");
+    io.emit("buttonArcade : down");
+  });
+
+  buttonRectangle.on("down", function() {
+    console.log("buttonRectangle : down");
+    io.emit("buttonRectangle : down");
+  });
+
+
+  // "hold" the joystickPin2 is pressed for specified time.
   //        defaults to 500ms (1/2 second)
   //        set
-  buttonPin2.on("hold", function() {
+  joystickPin2.on("hold", function() {
     console.log("pin2 : hold");
     io.emit("pin2 : hold");
   });
-  buttonPin3.on("hold", function() {
+  joystickPin3.on("hold", function() {
     console.log("pin3 : hold");
     io.emit("pin3 : hold");
   });
-  buttonPin4.on("hold", function() {
+  joystickPin4.on("hold", function() {
     console.log("pin4 : hold");
     io.emit("pin4 : hold");
   });
-  buttonPin5.on("hold", function() {
+  joystickPin5.on("hold", function() {
     console.log("pin5 : hold");
     io.emit("pin5 : hold");
   });
 
-  // "up" the buttonPin2 is released
-  buttonPin2.on("up", function() {
+
+
+  buttonArcade.on("hold", function() {
+    console.log("buttonArcade : hold");
+    io.emit("buttonArcade : hold");
+  });
+
+  buttonRectangle.on("hold", function() {
+    console.log("buttonRectangle : hold");
+    io.emit("buttonRectangle : hold");
+  });
+
+
+
+  // "up" the joystickPin2 is released
+  joystickPin2.on("up", function() {
     console.log("pin2 : up");
     io.emit("pin2 : up");
   });
-  buttonPin3.on("up", function() {
+  joystickPin3.on("up", function() {
     console.log("pin3 : up");
     io.emit("pin3 : up");
   });
-  buttonPin4.on("up", function() {
+  joystickPin4.on("up", function() {
     console.log("pin4 : up");
     io.emit("pin4 : up");
   });
-  buttonPin5.on("up", function() {
+  joystickPin5.on("up", function() {
     console.log("pin5 : up");
   });
-});
 
+
+
+  buttonArcade.on("up", function() {
+    console.log("buttonArcade : up");
+  });
+
+
+  buttonRectangle.on("up", function() {
+    console.log("buttonRectangle : up");
+  });
+});
 
 
 //Serveur écoute le port 80
