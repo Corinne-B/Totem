@@ -1,0 +1,40 @@
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>La grille</title>
+      <link rel='stylesheet prefetch' href='js/jquery-ui.css'>
+      <link rel = "stylesheet" type="text/css" href="style/style.css">
+    </head>
+    <body>
+       <div id ="check" style = "width:80px; height:80px; backgroundColor:blue;" ></div>
+      <main id = "main">
+      <h1>La fabrique d'objets libres</h1>
+    
+        
+      <section class='box container'>
+        <div class='header'>
+          <h2>Hope & Bike</h2>
+        </div>
+        <div class='content'>
+         <div>
+          <h3>Machine</h3>
+          <p>Matériau 1</p>
+         </div>
+        </div>
+      </section>
+    
+      <script type="text/javascript">
+      document.getElementById('check').addEventListener("click", function(){
+      document.body.style.backgroundImage = "url('')";
+      console.log("j'ai cliqué en haut à gauche");
+      });
+      </script>
+      
+      <script src='js/jquery.min.js'></script>
+      <script src='js/jquery-ui.min.js'></script>
+      <script src="js/TweenMax.js"></script>
+      <script src="js/totem.js"></script> <!--JS qui génére le signe-->
+      <script src='js/content.js'></script>
+      </main>
+    </body>
+  </html>

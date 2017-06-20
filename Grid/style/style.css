@@ -1,0 +1,134 @@
+@font-face {
+    font-family: SourceSansPro-Regular;
+    src: url(../font/SourceSansPro-Regular.ttff);
+
+    font-family: SourceSansPro-Bold;
+    src: url(../font/SourceSansPro-Bold.ttff);
+
+    font-family: SourceSansPro-Light;
+    src: url(../font/SourceSansPro-Light.ttff);
+
+
+}
+
+*{
+  font-family: SourceSansPro-Regular, sans-serif;
+}
+
+main{
+  position: absolute;
+  width : 2000px;
+  height : 3500px;
+}
+
+section{
+  z-index: 90;
+  position: relative;
+  width: 100%;
+
+  max-width : 900px;
+  /*padding : 20px;*/
+  -moz-box-shadow: 10px 10px 0px 0px #54CFB3;
+  -webkit-box-shadow: 10px 10px 0px 0px #54CFB3;
+  -o-box-shadow: 10px 10px 0px 0px #54CFB3;
+  box-shadow: 10px 10px 0px 0px #54CFB3;
+  transition: box-shadow 0.15s ease-in-out;
+  /*  background:url("../content/img/Hope_Bike.jpg");
+  background-size: cover;*/
+}
+
+section:hover {
+  -moz-box-shadow: 15px 15px 0px 0px #54CFB3;
+  -webkit-box-shadow: 15px 15px 0px 0px #54CFB3;
+  -o-box-shadow: 15px 15px 0px 0px #54CFB3;
+  box-shadow: 15px 15px 0px 0px #54CFB3;
+}
+
+
+section aside {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    
+  /*background:url("../content/img/1.jpg");
+  background-size: cover;*/
+}
+
+
+h1{
+  width: 100%;
+  position: fixed;
+  text-align : center;
+  z-index: 100;
+  display:inline-block;
+}
+
+h2 {
+  font-family: SourceSansPro-Bold, sans-serif;
+  margin: 0;
+  margin-bottom: 10px;
+  display:inline-block;
+}
+
+.header, .content{
+  
+  display:inline-block;
+}
+
+
+input:checked < body{
+  margin-top: 10000px;
+}
+body {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGUlEQVQYV2NkIBIwEqmOYVQh3pAiNnj+AwALaAEKfsPrZgAAAABJRU5ErkJggg==);
+  background-position: 18px 11px;
+}
+
+.box {
+  position:relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-left: 0;
+  min-width: 500px;
+  background-color: #ffffff;
+  transition: all .2s ease;
+  /*padding-top: 70px;*/
+}
+
+.box:hover {
+  margin-top: 55px;
+  margin-left: 5px;
+}
+
+
+.opac {
+  opacity: .8;
+}
+
+.move-cursor {
+  cursor: grab;
+}
+
+.grab-cursor {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.container .content{
+  position: absolute;
+  display:none;
+}
+
+.container.active .content, .container .content p, .container .content div{
+  display: inline-block;
+  pointer-events:none;
+}
+
+
+
+span {
+    font-weight: bold;
+}
+
+
