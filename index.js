@@ -168,6 +168,7 @@ board.on("ready", function() {
 
   buttonRectangle.on("up", function() {
     console.log("buttonRectangle : up");
+    io.emit("buttonArcade : up")
   });
 });
 
