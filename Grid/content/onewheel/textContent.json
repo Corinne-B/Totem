@@ -1,6 +1,15 @@
 {
     "title":"Onewheel",
     "description":"<h2>Un projet d'un vélo électrique</h2>",
-    "content":["<div><h3>Description du projet</h3><p>Imprimante 3D entièrement découpée à la Laser.</br></br>Développement à suivre</p></div>",
-    "<div><h3>Crédits</h3><p>Par Admin</br></br>Développement à suivre.</p></div>"]
+    "content":[
+      {
+        "html":"<div><h3>Description du projet</h3><p>Imprimante 3D entièrement découpée</br> à la Laser.</br></br>Développement à suivre</p></div>"
+      },
+      {
+        "html":"<div><h3>Crédits</h3><p>Par Admin</br></br>Médéric Droz dit Busset</p></br>Médéric</br></br>Matthieu Borgognon</br>matbgn</div>"
+      },
+      {
+        "html":"<div><h3>Machines et matériaux</h3><p>Découpeuse laser</br>Bois Contre plaqué</p></div>"
+      }
+    ]
 }
