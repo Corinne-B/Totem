@@ -1,4 +1,4 @@
-# Totem
+# Totems
 Code to create your own Totem
 
 To install your own Totem, you will need to create your express server with npm.
