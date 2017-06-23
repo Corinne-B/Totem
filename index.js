@@ -51,6 +51,8 @@ board.on("ready", function() {
 
   buttonRectangle = new five.Button(7); //Start Button
 
+  buttonRectangle2 = new five.Button(8); //Random Button
+
   // Inject the `joystickPin2` hardware into
   // the Repl instance's context;
   // allows direct command line access
@@ -73,6 +75,10 @@ board.on("ready", function() {
 
   board.repl.inject({
     buttonRectangle: buttonRectangle
+  });
+
+  board.repl.inject({
+    buttonRectangle2: buttonRectangle
   });
 
 
@@ -107,6 +113,11 @@ board.on("ready", function() {
     io.emit("buttonRectangle : down");
   });
 
+  buttonRectangle2.on("down", function() {
+    console.log("buttonRectangle2 : down");
+    io.emit("buttonRectangle2 : down");
+  });
+
 
   // "hold" the joystickPin2 is pressed for specified time.
   //        defaults to 500ms (1/2 second)
@@ -138,6 +149,11 @@ board.on("ready", function() {
   buttonRectangle.on("hold", function() {
     console.log("buttonRectangle : hold");
     io.emit("buttonRectangle : hold");
+  });
+
+  buttonRectangle2.on("hold", function() {
+    console.log("buttonRectangle2 : hold");
+    io.emit("buttonRectangle2 : hold");
   });
 
 
