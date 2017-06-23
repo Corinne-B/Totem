@@ -118,7 +118,7 @@ body {
 }
 
 .content div{
-  position: absolute;
+  position: inherit;
 }
 
 

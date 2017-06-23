@@ -54,8 +54,7 @@ function GenerateContent(raw, foldername) {
       $(".box").addClass('hidden');
       $(container).removeClass('hidden');
       TweenMax.to('.hidden', 0.3, {opacity:0});
-      
-      //TweenMax.staggerTo('.active', 0.3, {left:300, top:1000}, 3);
+      TweenMax.staggerFromTo('.content > div', 0.2, {opacity:0, y: 100}, {opacity:1, y: 0}, 0.3);
     } else {
       $(".box").removeClass('hidden');
       TweenMax.to('.box', 0.3, {opacity:1}); 

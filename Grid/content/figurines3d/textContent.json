@@ -12,7 +12,7 @@
         "initial":{"x":30, "y":300}
       },
       {
-        "html":"<div><h3>Machines et matériaux</h3><p>Découpeuse laser</br>Bois Contre plaqué</p></div>",
+        "html":"<div class='element'><h3>Machines et matériaux</h3><p>Découpeuse laser</br>Bois Contre plaqué</p></div>",
         "initial":{"x":550, "y":300}
       }
     ]
