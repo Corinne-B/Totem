@@ -16,7 +16,7 @@ function GenerateContent(raw, foldername) {
   //section.style.backgroundImage = "url('content/hopeandbike/cover.jpg')";
   //section.style.indexZ = "0"
   section.className += "box container";
-  content.style.backgroundSize = "cover";
+  section.style.backgroundSize = "cover";
   section.style.left = Math.random()*document.getElementById('main').offsetWidth;
   section.style.top = Math.random()*document.getElementById('main').offsetHeight;
   //section.style.position = "absolute";
