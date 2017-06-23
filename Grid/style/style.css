@@ -121,6 +121,8 @@ body {
 .container .content{
   position: absolute;
   display:none;
+  left:0;
+  top:0;
 }
 
 .container.active .content, .container .content p, .container .content div{
@@ -128,6 +130,9 @@ body {
   pointer-events:none;
 }
 
+.content div{
+  position: absolute;
+}
 
 
 span {

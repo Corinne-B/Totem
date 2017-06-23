@@ -29,7 +29,6 @@ document.body.onclick = appendSign
 function appendSign (e) {
   if (isMouseHeld) {
     isMouseHeld = false
-    console.log("clique");
     var div = document.createElement('div');
 
     div.style.backgroundImage = "url('content/totem/totem_1.png')";
@@ -43,7 +42,6 @@ function appendSign (e) {
 
     document.body.appendChild(div);
   } else {
-    console.log('mouse not held')
   }
 }
 
