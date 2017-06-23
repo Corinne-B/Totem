@@ -4,13 +4,16 @@
     "image":"<img src=cover.jpg />",
     "content":[
       {
-        "html":"<div><h3>Description du projet</h3><p>Imprimante 3D entièrement découpée</br> à la Laser.</br></br>Développement à suivre</p></div>"
+        "html":"<div><h3>Description du projet</h3><p>Imprimante 3D entièrement découpée</br> à la Laser.</br></br>Développement à suivre</p></div>",
+        "initial":{"x":550, "y":-20}
       },
       {
-        "html":"<div><h3>Crédits</h3><p>Par Admin</br></br>Médéric Droz dit Busset</p></br>Médéric</br></br>Matthieu Borgognon</br>matbgn</div>"
+        "html":"<div><h3>Crédits</h3><p>Par Admin</br></br>Médéric Droz dit Busset</p></br>Médéric</br></br>Matthieu Borgognon</br>matbgn</div>",
+        "initial":{"x":30, "y":300}
       },
       {
-        "html":"<div><h3>Machines et matériaux</h3><p>Découpeuse laser</br>Bois Contre plaqué</p></div>"
+        "html":"<div class='element'><h3>Machines et matériaux</h3><p>Découpeuse laser</br>Bois Contre plaqué</p></div>",
+        "initial":{"x":550, "y":300}
       }
     ]
 }

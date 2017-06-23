@@ -1,9 +1,9 @@
 
 
-function GenerateContent(raw) {
-  console.log(raw);
+function GenerateContent(raw, foldername) {
+  //console.log(raw);
   var projects = JSON.parse(raw);
-  console.log(projects);
+  //console.log(projects);
   
   
       
@@ -16,12 +16,13 @@ function GenerateContent(raw) {
   //section.style.backgroundImage = "url('content/hopeandbike/cover.jpg')";
   //section.style.indexZ = "0"
   section.className += "box container";
-  content.style.backgroundSize = "cover";
+  section.style.backgroundSize = "cover";
   section.style.left = Math.random()*document.getElementById('main').offsetWidth;
   section.style.top = Math.random()*document.getElementById('main').offsetHeight;
   //section.style.position = "absolute";
   section.style.height = "200px";
   section.style.width = "200px";
+  section.style.backgroundImage = "url('/content/"+ foldername+"/cover.jpg')";
     
   var grid_size = 10;
   
@@ -53,8 +54,7 @@ function GenerateContent(raw) {
       $(".box").addClass('hidden');
       $(container).removeClass('hidden');
       TweenMax.to('.hidden', 0.3, {opacity:0});
-      
-      //TweenMax.staggerTo('.active', 0.3, {left:300, top:1000}, 3);
+      TweenMax.staggerFromTo('.content > div', 0.2, {opacity:0, y: 100}, {opacity:1, y: 0}, 0.3);
     } else {
       $(".box").removeClass('hidden');
       TweenMax.to('.box', 0.3, {opacity:1}); 
@@ -172,8 +172,11 @@ function isCollide(a, b) {
     //console.log(project);
     content.innerHTML += project.html;
     var element = content.lastChild;
-    console.log(element);
-    }
+    
+    element.style.left = project.initial.x;
+    element.style.top = project.initial.y;
+    //console.log(element);
+  }
     
           
      
@@ -182,15 +185,7 @@ function isCollide(a, b) {
 
 }
 
-var foldernames = ["figurines3d", "hopeandbike", "imprimanteprusai3", "onewheel", "treasurebox", "tshirtstormtrooper"];
 
-function GenerateImg(i) {
-  for (var i=0;i<foldernames.length;i++){
-      document.getElementsByTagName('section')[i].style.backgroundImage = "url('/content/"+ foldernames[i]+"/cover.jpg')";
-      console.log(i);
-      console.log('une image est la');
-  }
-}
     
 
 
@@ -204,22 +199,23 @@ function GenerateImg(i) {
 $( function() {
   var folders = ["figurines3d", "hopeandbike", "imprimanteprusai3", "onewheel", "treasurebox", "tshirtstormtrooper"];       
       
-  for (var i=0;i<folders.length;i++){
+  for (let i=0;i<folders.length;i++){
     var req = new XMLHttpRequest();
     req.open('GET', 'content/'+ folders[i]+'/textContent.json');
-    req.onreadystatechange = function(event) {
+    req.onreadystatechange = (event) => {
+      console.log(folders[i], this, event);
       // XMLHttpRequest.DONE === 4
-      if (this.readyState === XMLHttpRequest.DONE) {
-        if (this.status === 200) {
-          GenerateContent(this.responseText);
-          GenerateImg(i);
+      if (event.target.readyState === XMLHttpRequest.DONE) {
+        if (event.target.status === 200) {
+          console.log(folders[i]);
+          GenerateContent(event.target.responseText, folders[i]);
         //}
           
         } else {
           console.log("Status de la réponse: %d (%s)", this.status, this.statusText);
         }
       }
-    };
+    }
     req.send();
   }
 })
