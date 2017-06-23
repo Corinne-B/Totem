@@ -1,18 +1,5 @@
-@font-face {
-    font-family: SourceSansPro-Regular;
-    src: url(../font/SourceSansPro-Regular.ttff);
-
-    font-family: SourceSansPro-Bold;
-    src: url(../font/SourceSansPro-Bold.ttff);
-
-    font-family: SourceSansPro-Light;
-    src: url(../font/SourceSansPro-Light.ttff);
-
-
-}
-
 *{
-  font-family: SourceSansPro-Regular, sans-serif;
+  font-family: Rubik, Helvetica, Arial, sans-serif;
 }
 
 main{
@@ -21,7 +8,7 @@ main{
   height : 3500px;
 }
 
-section{
+section {
   z-index: 90;
   position: relative;
   width: 100%;
@@ -56,25 +43,25 @@ section aside {
 }
 
 
-h1{
-  width: 100%;
-  position: fixed;
-  text-align : center;
-  z-index: 100;
+h1 {
   display:inline-block;
-  
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  font-family: Rubik, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  text-align: center;
 }
 
 h2 {
-  font-family: SourceSansPro-Bold, sans-serif;
-  margin: 0;
-  margin-bottom: 10px;
   display:inline-block;
-  pointer-events:none;
+  margin-bottom: 10px;
+  font-family: Rubik, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  pointer-events: none;
 }
 
 .header, .content{
-  
   display:inline-block;
   pointer-events:none;
 }
