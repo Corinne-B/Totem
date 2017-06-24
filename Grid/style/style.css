@@ -7,7 +7,7 @@
 main{
   /*position: absolute;*/
   width : 1000px;
-  height : 1000px;
+  height : 2000px;
 }
 
 section{
@@ -68,10 +68,16 @@ h1{
 
 h2 {
   font-weight : 700;
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 10px;
   display:inline-block;
   pointer-events:none;
+
+  color: white;
+  background-color: black;
+  padding: 2%;
+  margin: 5%;
 }
 
 .header, .content{
@@ -90,7 +96,7 @@ body {
 }
 
 .box {
-  position:relative;
+  position:target;
   margin: 0 auto;
   /*margin-top: 50px;*/
   margin-left: 0;
@@ -101,7 +107,7 @@ body {
 }
 
 .box:hover {
-  margin-top: 55px;
+  margin-top: 5px;
   margin-left: 5px;
 }
 
@@ -149,6 +155,7 @@ span {
   width: 40px;
   height: 40px;
 
+  opacity: 0.5;
   z-index: 150;
 }
 

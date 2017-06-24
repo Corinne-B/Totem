@@ -7,24 +7,11 @@
     <link rel = "stylesheet" type="text/css" href="style/font.css">
   </head>
   <body>
-   <main id = "main">
-<!--    <div id ="check" style = "width:80px; height:80px; backgroundColor:blue;" ></div> -->
-
+     <button onclick="disableDraggable()" style ="opacity:0">Click me</button> 
     <h1>La fabrique d'objets libres</h1>
     
     <div id = "targetJoy"></div>
-    
-    <section class='box container'>
-      <div class='header'>
-        <h2>Hope & Bike</h2>
-      </div>
-      <div class='content'>
-       <div>
-        <h3>Machine</h3>
-        <p>Matériau 1</p>
-      </div>
-    </div>
-  </section>
+
   <footer id = "footer">
   </footer> 
 
@@ -37,6 +24,9 @@
   <script src='js/random.js'></script>
   <script type="text/javascript">
 
+    function disableDraggable(){
+      $('section').draggable( 'disable' )
+    }
 /*  document.getElementById('check').addEventListener("click", function(){
     document.body.style.backgroundImage = "url('')";
     console.log("j'ai cliqué en haut à gauche");
@@ -92,12 +82,12 @@
       })
     });
     socket.on("buttonArcade : up", function(button){
-      //window.scrollTo( document.body.scrollLeft -speedScroll , document.body.scrollTop );
+      //window.scrollTos( document.body.scrollLeft -speedScroll , document.body.scrollTop );
     });
+
   });
 
 </script>
 
-</main>
 </body>
 </html>

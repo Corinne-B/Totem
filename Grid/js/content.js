@@ -1,6 +1,6 @@
 
 
-function GenerateContent(raw, foldername) {
+function GenerateContent(raw, foldername, position) {
   //console.log(raw);
   var projects = JSON.parse(raw);
   //console.log(projects);
@@ -11,20 +11,24 @@ function GenerateContent(raw, foldername) {
   var header = document.createElement('div');
   var title = document.createElement('h2');
   var content = document.createElement('div');
-  
+
+  var posX = [100,200,300,400,500,600];
+  var posY = [100,200,300,400,500,600];
   //section.style.backgroundImage = "url('content/img/" + i + ".jpg')";
   //section.style.backgroundImage = "url('content/hopeandbike/cover.jpg')";
   //section.style.indexZ = "0"
   section.className += "box container";
   section.style.backgroundSize = "cover";
-  section.style.left = Math.random()*document.getElementById('main').offsetWidth;
-  section.style.top = Math.random()*document.getElementById('main').offsetHeight;
+/*  section.style.left = Math.random() *$(document).width();
+  section.style.top = Math.random() *$(document).height();*/
+  section.style.left = posX[position];
+  section.style.top = posY[position];
   //section.style.position = "absolute";
   section.style.height = "200px";
   section.style.width = "200px";
   section.style.backgroundImage = "url('/content/"+ foldername+"/cover.jpg')";
     
-  var grid_size = 10;
+  var grid_size = 20;
   
   $(section)
   .draggable({ grid: [ grid_size, grid_size ] })
@@ -81,7 +85,7 @@ var sizeScreenY = 864;
   socket.on("buttonArcade : down", function(button){
 
   //Animation du signe qui s'appose
-  TweenMax.staggerFromTo($(targetJoy), 2, { scale: 0.6, ease: Back.easeOut }, { scale: 1},   0.2);
+  TweenMax.staggerFromTo($(targetJoy), 2, { scale: 0.6, opacity: 0.5, ease: Back.easeOut }, { scale: 1, opacity: 1, ease: Back.easeOut },   0.2);
 
    divMouseDownTimeout = setTimeout(function() {
     isMouseHeld = true;
@@ -104,6 +108,7 @@ var sizeScreenY = 864;
         div.style.top = document.body.scrollTop;*/
         div.style.left = pageXOffset + screen.width/2;
         div.style.top = pageYOffset + screen.height/2;
+        div.style.margin = "5px";
         div.style.height = "20px";
         div.style.width = "20px";
 
@@ -199,7 +204,7 @@ $( function() {
       if (event.target.readyState === XMLHttpRequest.DONE) {
         if (event.target.status === 200) {
           console.log(folders[i]);
-          GenerateContent(event.target.responseText, folders[i]);
+          GenerateContent(event.target.responseText, folders[i], i);
         //}
           
         } else {
