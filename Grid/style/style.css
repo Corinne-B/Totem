@@ -11,8 +11,10 @@ main{
 }
 
 section{
-  z-index: 90;
-  position: relative;
+  /*z-index: 90;*/
+  position: absolute;
+  top:0;
+  left:0;
   width: 100%;
 
   max-width : 900px;
@@ -45,11 +47,10 @@ section:hover {
   box-shadow: 15px 15px 0px 0px #54CFB3;
 }
 
-
 section aside {
     height: 100%;
     width: 100%;
-    position: absolute;
+    /*position: absolute;*/
     right: 0;
     
   /*background:url("../content/img/1.jpg");
@@ -73,8 +74,7 @@ h2 {
   margin-bottom: 10px;
   display:inline-block;
   pointer-events:none;
-
-  color: white;
+ color: white;
   background-color: black;
   padding: 2%;
   margin: 5%;
@@ -84,8 +84,10 @@ h2 {
   
   display:inline-block;
   pointer-events:none;
+  position:absolute;
+  top:0px;
+  left:0px;
 }
-
 
 input:checked < body{
   margin-top: 10000px;
@@ -108,11 +110,15 @@ body {
   /*padding-top: 70px;*/
 }
 
+.content > div{
+  position:absolute;
+}
+
+
 .box:hover {
   margin-top: 5px;
   margin-left: 5px;
 }
-
 
 .opac {
   opacity: .8;
@@ -137,12 +143,9 @@ body {
   pointer-events:none;
 }
 
-
-
 span {
     font-weight: bold;
 }
-
 
 #targetJoy{
   position: fixed;
