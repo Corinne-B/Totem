@@ -179,12 +179,13 @@ board.on("ready", function() {
 
   buttonArcade.on("up", function() {
     console.log("buttonArcade : up");
+    io.emit("buttonArcade : up");
   });
 
 
   buttonRectangle.on("up", function() {
     console.log("buttonRectangle : up");
-    io.emit("buttonArcade : up")
+    io.emit("buttonRectangle : up")
   });
 });
 

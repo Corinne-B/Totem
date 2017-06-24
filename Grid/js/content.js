@@ -62,28 +62,6 @@ function GenerateContent(raw, foldername) {
   });
 
 
-/*function isCollide(a, b) {
-  console.log(a.offsetTop);
-  console.log(a.clientHeight);
-  return !(
-    ((a.offsetTop + a.clientHeight) < (b.offsetTop)) ||
-    (a.offsetTop > (b.offsetTop + b.clientHeight)) ||
-    ((a.offsetLeft + a.clientWidth) < b.offsetLeft) ||
-    (a.offsetLeft > (b.offsetLeft + b.clientWidth))
-    ) && a != b;
-};
-
-
-  $(section).on('drag', function(event){
-    var elements = document.querySelectorAll('section');
-
-    for (var i = elements.length - 1; i >= 0; i--) {
-      var element = elements[i];
-      if(isCollide(section, element)){
-        console.log("collision");
-      }
-    };
-  });*/
 
 var Target = document.getElementById('targetJoy');
 Target.style.top = screen.height/2 - Target.clientHeight; //position target center vertically
@@ -94,13 +72,22 @@ document.getElementById("targetJoy").style.backgroundImage = "url('content/totem
 
 
 ////////////////////////////////////////////Generate Sign Totem on press Arcade Button/////////////////////////////////////
-var socket = io();  
-socket.on("buttonArcade : down", function(button){
-    divMouseDownTimeout = setTimeout(function() {
-      isMouseHeld = true;
-      generateTotem();
-      console.log(isMouseHeld);
-    }, 1000);
+var divMouseDownTimeout;
+var isMouseHeld = false;
+var socket = io();
+var sizeScreenX = 1536;
+var sizeScreenY = 864; 
+
+  socket.on("buttonArcade : down", function(button){
+
+  //Animation du signe qui s'appose
+  TweenMax.staggerFromTo($(targetJoy), 2, { scale: 0.6, ease: Back.easeOut }, { scale: 1},   0.2);
+
+   divMouseDownTimeout = setTimeout(function() {
+    isMouseHeld = true;
+    generateTotem();
+    console.log(isMouseHeld);
+  }, 1000);
   });
 
   function generateTotem(e){
@@ -115,8 +102,8 @@ socket.on("buttonArcade : down", function(button){
       div.style.position = "absolute";
         /*div.style.left = document.body.scrollLeft;
         div.style.top = document.body.scrollTop;*/
-        div.style.left = pageXOffset + sizeScreenX / 2;
-        div.style.top = pageYOffset + sizeScreenY / 2;
+        div.style.left = pageXOffset + screen.width/2;
+        div.style.top = pageYOffset + screen.height/2;
         div.style.height = "20px";
         div.style.width = "20px";
 
@@ -126,11 +113,14 @@ socket.on("buttonArcade : down", function(button){
     socket.on("buttonArcade : up", function(button){   
       if (divMouseDownTimeout) {
         clearTimeout(divMouseDownTimeout);
+        /*TweenMax.killAll();
+        TweenMax.set($(targetJoy), {scale: 1});*/
       }
     });
 
 
 ////////////////////////////////////////FONCTION TO CHECK IF IS COLLIDE//////////////////////////////////////////////////////////////////
+var contentClick;
 
 function isCollide(a, b) {
   return !(
@@ -148,7 +138,8 @@ function isCollide(a, b) {
     for (var i = elements.length - 1; i >= 0; i--) {
       var element = elements[i];
       if(isCollide(document.getElementById('targetJoy'), element)){
-        console.log("collision");
+        console.log("collision ");
+        console.log(element);
       }
     };
   });

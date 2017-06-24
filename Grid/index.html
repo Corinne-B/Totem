@@ -33,6 +33,7 @@
   <script src="js/TweenMax.js"></script>
   <script src="js/totem.js"></script> <!--JS qui génére le signe-->
   <script src='js/content.js'></script>
+  <script src='js/random.js'></script>
   <script type="text/javascript">
 
 /*  document.getElementById('check').addEventListener("click", function(){
@@ -89,49 +90,11 @@
         ease : Linear.None
       })
     });
+    socket.on("buttonArcade : up", function(button){
+      //window.scrollTo( document.body.scrollLeft -speedScroll , document.body.scrollTop );
+      alert('up');
+    });
   });
-  //////////////////////////////Set Deposer totem/////////////////////////////////////
-  var divMouseDownTimeout;
-  var isMouseHeld = false;
-  var socket = io();
-  var sizeScreenX = 1536;
-  var sizeScreenY = 864;
-
-/*  socket.on("buttonArcade : down", function(button){
-    divMouseDownTimeout = setTimeout(function() {
-      isMouseHeld = true;
-      generateTotem();
-      console.log(isMouseHeld);
-    }, 1000);
-  });
-
-  function generateTotem(e){
-    if (isMouseHeld) {
-      isMouseHeld = false
-      console.log("clique");
-      var div = document.createElement('div');
-
-      div.style.backgroundImage = "url('content/totem/totem_1.png')";
-      div.style.indexZ = "0"
-      div.style.backgroundSize = "cover";
-      div.style.position = "absolute";
-        /*div.style.left = document.body.scrollLeft;
-        div.style.top = document.body.scrollTop;
-        div.style.left = pageXOffset + sizeScreenX / 2;
-        div.style.top = pageYOffset + sizeScreenY / 2;
-        div.style.height = "20px";
-        div.style.width = "20px";
-
-        document.body.appendChild(div);
-      }
-    };
-    socket.on("buttonArcade : up", function(button){   
-      if (divMouseDownTimeout) {
-        clearTimeout(divMouseDownTimeout);
-      }
-    });*/
-//
-///////////////////////////////////////////////////////////////////////////////////
 
 </script>
 
