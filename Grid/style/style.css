@@ -5,8 +5,8 @@
 }
 
 main{
-  /*position: absolute;*/
-  width : 1000px;
+  position: absolute;
+  width : 2000px;
   height : 2000px;
 }
 
@@ -91,8 +91,10 @@ input:checked < body{
   margin-top: 10000px;
 }
 body {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGUlEQVQYV2NkIBIwEqmOYVQh3pAiNnj+AwALaAEKfsPrZgAAAABJRU5ErkJggg==);
-  background-position: 18px 11px;
+  background: url('../content/interface/Grid_Point.png');
+  background-repeat: repeat;
+ /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGUlEQVQYV2NkIBIwEqmOYVQh3pAiNnj+AwALaAEKfsPrZgAAAABJRU5ErkJggg==);
+  background-position: 18px 11px;*/
 }
 
 .box {
@@ -152,10 +154,10 @@ span {
   left: 0;
   margin-right: auto;
   margin-left: auto;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
 
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: 150;
 }
 
