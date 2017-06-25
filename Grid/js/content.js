@@ -12,8 +12,8 @@ function GenerateContent(raw, foldername, position) {
   var title = document.createElement('h2');
   var content = document.createElement('div');
 
-  var posX = [1640,1260,620,2320,1000,1760];
-  var posY = [1160,300,100,800,540,860];
+  var posX = [1644.25, 896.67, 149.83, 1759.37, 1582.32, 810.66, 1652.32];
+  var posY = [1689,300, 54.17, -115, 54.37 , 63.11, 7.42, 965,78];
   //section.style.backgroundImage = "url('content/img/" + i + ".jpg')";
   //section.style.backgroundImage = "url('content/hopeandbike/cover.jpg')";
   //section.style.indexZ = "0"

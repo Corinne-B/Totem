@@ -4,17 +4,25 @@
   padding: 0;
 }
 
+html{
+  position:absolute;
+   width : 2761px;
+  height : 2174.77px;
+}
+
 body{
-  position: absolute;
-  width : 2940px;
-  height : 1700px;
+  position: static;
+  width : 2761px;
+  height : 2174.77px;
+  background: url('../content/interface/Grid_Point.png');
+  background-repeat: repeat;
 }
 
 section{
   /*z-index: 90;*/
   position: absolute;
-  top:0;
-  left:0;
+  /*top:0;
+  left:0;*/
   width: 100%;
 
   max-width : 900px;
@@ -85,11 +93,20 @@ h2 {
   margin: 5%;
 }
 
+h4{
+  font-weight : 700;
+  font-size: 20px;
+  display:inline-block;
+  margin-left: 50px;
+  margin-top: 50px;
+  color: #54CFB3;
+}
+
 .header, .content{
   
   display:inline-block;
   pointer-events:none;
-  position:absolute;
+  /*position:absolute;*/
   top:0px;
   left:0px;
 }
@@ -100,12 +117,6 @@ h2 {
 
 input:checked < body{
   margin-top: 10000px;
-}
-body {
-  background: url('../content/interface/Grid_Point.png');
-  background-repeat: repeat;
- /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGUlEQVQYV2NkIBIwEqmOYVQh3pAiNnj+AwALaAEKfsPrZgAAAABJRU5ErkJggg==);
-  background-position: 18px 11px;*/
 }
 
 .box {
@@ -127,6 +138,81 @@ body {
 .box:hover {
   margin-top: 5px;
   margin-left: 5px;
+}
+
+#solicitation1{
+  position:absolute;
+  width: 200px;
+  height: 200px;
+  left: 630.45px;
+  top: 1546.53px;
+  
+}
+  
+#canape{
+  position:absolute;
+  border-style: dashed;
+  border-color: #54CFB3;
+  border-width: 5px;
+  
+  width: 745.9px;
+  height: 578.6px;
+  background-image: none;
+  
+}
+  
+
+#solicitation1 div{
+  background-image: url("/content/solicitations/plan_fablab.png");
+
+  /*position: absolute;*/
+  width:733px;
+  height:563px;
+  
+  /*left: 637.13px;
+  top: 1182.23px;*/
+}
+
+#solicitation2{
+  position:absolute;
+  width: 200px;
+  height: 200px;
+  left: 5px;
+  top: 1000.34px;
+}
+
+#solicitation2 span{
+  font-weight : 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  display:inline-block;
+  color: #54CFB3;
+}
+
+#solicitation2 div{
+  background-color: white;
+  width: 678.35px;
+  height: 395px;
+  border-style: dashed;
+  border-color: #54CFB3;
+  border-width: 5px;
+}
+  
+#arduino{
+  margin-left: 150px;
+}
+
+#sketchup{
+  margin-left: 150px;
+  margin-top: 150px;
+}
+
+  /*position: absolute;*/
+  width:678.35px;
+  height:395px;
+  
+  /*left: 637.13px;
+  top: 1182.23px;*/
 }
 
 .opac {

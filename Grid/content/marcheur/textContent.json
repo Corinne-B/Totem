@@ -3,7 +3,7 @@
     "description":"<h2>Un projet d'un vélo électrique</h2>",
     "content":[
       {
-        "html":"<div><h3>Description du projet</h3><p>Imprimante 3D entièrement découpée</br> à la Laser.</br></br>Développement à suivre</p></div>",
+        "html":"<div><h3>Description du projet</h3><p style='width:800px, height:500px'>Plans pour marcheur type Strandbeest inspiré des travaux de l'artiste Theo Jansen. Le plan des pièces pour découpe laser, réalisé sous OpenSCAD, est paramétrable.Le projet débutant, le placement de pièces n'est pas optimisé et beaucoup reste à faire. En exportant d'OpenSCAD vers InkScape il est possible de replacer les pièces comme on le souhaite, de supprimer ou d'ajouter des éléments.</br> à la Laser.</br></br>Développement à suivre</p></div>",
         "initial":{"x":550, "y":-20}
       },
       {
