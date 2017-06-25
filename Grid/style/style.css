@@ -4,10 +4,10 @@
   padding: 0;
 }
 
-main{
+body{
   position: absolute;
-  width : 2000px;
-  height : 2000px;
+  width : 2940px;
+  height : 1700px;
 }
 
 section{
@@ -59,12 +59,17 @@ section aside {
 
 
 h1{
-  width: 100%;
   position: fixed;
   text-align : center;
   z-index: 100;
   display:inline-block;
+  left: 50%;
   margin-top: 50px;
+  margin-left: -216px;
+  color: #54CFB3;
+
+  padding: 2px 6px;
+  background-color: white;
 }
 
 h2 {
@@ -87,6 +92,10 @@ h2 {
   position:absolute;
   top:0px;
   left:0px;
+}
+
+.header{
+  max-width: 50%;
 }
 
 input:checked < body{
