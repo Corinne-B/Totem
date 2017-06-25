@@ -193,7 +193,7 @@ function isCollide(a, b) {
 
 
 $( function() {
-  var folders = ["figurines3d", "hopeandbike", "imprimanteprusai3", "onewheel", "treasurebox", "tshirtstormtrooper"];       
+  var folders = ["figurines3d", "hopeandbike", "imprimanteprusai3", "marcheur", "onewheel", "treasurebox", "tshirtstormtrooper"];       
       
   for (let i=0;i<folders.length;i++){
     var req = new XMLHttpRequest();
