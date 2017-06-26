@@ -1,18 +1,22 @@
 {
     "title":"Marcheur",
-    "description":"<h2>Un projet d'un vélo électrique</h2>",
+    "description":"<h2></h2>",
     "content":[
       {
-        "html":"<div><h3>Description du projet</h3><p style='width:800px, height:500px'>Plans pour marcheur type Strandbeest inspiré des travaux de l'artiste Theo Jansen. Le plan des pièces pour découpe laser, réalisé sous OpenSCAD, est paramétrable.Le projet débutant, le placement de pièces n'est pas optimisé et beaucoup reste à faire. En exportant d'OpenSCAD vers InkScape il est possible de replacer les pièces comme on le souhaite, de supprimer ou d'ajouter des éléments.</br> à la Laser.</br></br>Développement à suivre</p></div>",
-        "initial":{"x":550, "y":-20}
+        "html":"<div id='marcheur1' class='marcheur'><h3>RESSOURCES</h3><h5>DÉCOUPEUSE LASER</h5><span>Trotec 3000</span><h5>BOIS</h5><span>Medium 3 mm</span></div>",
+        "initial":{"x":560, "y":100}
       },
       {
-        "html":"<div><h3>Crédits</h3><p>Par Admin</br></br>Médéric Droz dit Busset</p></br>Médéric</br></br>Matthieu Borgognon</br>matbgn</div>",
-        "initial":{"x":30, "y":300}
+        "html":"<div id='marcheur2' class='marcheur'><h3>LICENSE</h3><p>Ce projet peut-être librement réutilisé, à condition<br> de ne pas en faire un usage commerciale et de le<br>repartager dans les même conditions.</p><img src='/content/marcheur/cc.png' alt='cc'></div>",
+        "initial":{"x":550, "y":400}
       },
       {
-        "html":"<div><h3>Machines et matériaux</h3><p>Découpeuse laser</br>Bois Contre plaqué</p></div>",
-        "initial":{"x":550, "y":300}
+        "html":"<div id='marcheur3' class='marcheur'><h3>CRÉATEURS</h3><span>Benoît</span><span>Conception de l'objet</span><span>Jérôme</span><span>Découpage et assemblage</span></div>",
+        "initial":{"x":180, "y":400}
+      },
+      {
+        "html":"<div id='marcheur4' class='marcheur'><h3>LE PROJET</h3><p><p>Plans pour marcheur type Strandbeest inspiré des<br>travaux de l'artiste Theo Jansen.<br><br>Le plan des pièces pour découpe laser, réalisé sous<br>OpenSCAD, est paramétrable.<br><br>Le projet débutant, le placement de pièces n'est<br>pas optimisé et beaucoup reste à faire. En<br>exportant d'OpenSCAD vers InkScape il est possible<br>de replacer les pièces comme on le souhaite, de supprimer ou d'ajouter des éléments.</p></div>",
+        "initial":{"x":-300, "y":400}
       }
     ]
 }

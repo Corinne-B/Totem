@@ -5,15 +5,20 @@
 }
 
 html{
-  position:absolute;
+  /*position:absolute;*/
    width : 2761px;
   height : 2174.77px;
+  top:0;
+  left:0;
+  overflow: auto;
 }
 
 body{
-  position: static;
-  width : 2761px;
+  position:absolute;
+  /*width : 2761px;
   height : 2174.77px;
+  top:0;
+  left:0;*/
   background: url('../content/interface/Grid_Point.png');
   background-repeat: repeat;
 }
@@ -23,7 +28,8 @@ section{
   position: absolute;
   /*top:0;
   left:0;*/
-  width: 100%;
+  /*width:width;
+  height:height;*/
 
   max-width : 900px;
   /*padding : 20px;*/
@@ -93,6 +99,18 @@ h2 {
   margin: 5%;
 }
 
+h3{
+  font-weight : 700;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #54CFB3;
+  
+h5{
+  font-weight : 500;
+}
+  
+}
+
 h4{
   font-weight : 700;
   font-size: 20px;
@@ -124,7 +142,7 @@ input:checked < body{
   margin: 0 auto;
   /*margin-top: 50px;*/
   margin-left: 0;
-  min-width: 500px;
+  /*min-width: 500px;*/
   background-color: #ffffff;
   transition: all .2s ease;
   /*padding-top: 70px;*/
@@ -208,12 +226,11 @@ input:checked < body{
 }
 
   /*position: absolute;*/
-  width:678.35px;
-  height:395px;
+  /*width:678.35px;
+  height:395px;*/
   
   /*left: 637.13px;
   top: 1182.23px;*/
-}
 
 .opac {
   opacity: .8;
@@ -239,7 +256,34 @@ input:checked < body{
 }
 
 span {
-    font-weight: bold;
+    /*font-weight: bold;*/
+}
+
+.marcheur{
+  background-color: white;
+  border:solid;
+  border-width:thin;
+  border-color:#E6E6E6;
+}
+
+#marcheur1{
+  width:322px;
+  height:195.33px;
+}
+
+#marcheur2{
+  width:342px;
+  height:222px;
+}
+
+#marcheur3{
+  width:282px;
+  height:195.33px;
+}
+
+#marcheur4{
+  width:382px;
+  height:288.67px;
 }
 
 #targetJoy{

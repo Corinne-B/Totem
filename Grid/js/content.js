@@ -1,6 +1,6 @@
 
 
-function GenerateContent(raw, foldername, position) {
+function GenerateContent(raw, foldername, position, height, width) {
   //console.log(raw);
   var projects = JSON.parse(raw);
   //console.log(projects);
@@ -12,10 +12,10 @@ function GenerateContent(raw, foldername, position) {
   var title = document.createElement('h2');
   var content = document.createElement('div');
 
-  var posX = [1644.25, 896.67, 149.83, 1759.37, 1582.32, 810.66, 1652.32];
-  var posY = [1689,300, 54.17, -115, 54.37 , 63.11, 7.42, 965,78];
-  //section.style.backgroundImage = "url('content/img/" + i + ".jpg')";
-  //section.style.backgroundImage = "url('content/hopeandbike/cover.jpg')";
+  var posX = [1648.6, 896.67, 209.83, 1559.37, 1586.67, 815, 1656.67];
+  var posY = [1390.17, -24.17, -115, 64.37, 455, 498.33, 838.33];
+  var h = [426.33, 88.33, 250, 337.92, 130, 356.67, 243.33];
+  var w = [736.12, 433.33, 473.67, 447.92, 413.33, 630, 480];
   //section.style.indexZ = "0"
   section.className += "box container";
   section.style.backgroundSize = "cover";
@@ -23,17 +23,18 @@ function GenerateContent(raw, foldername, position) {
   section.style.top = Math.random() *$(document).height();*/
   section.style.left = posX[position];
   section.style.top = posY[position];
-  //section.style.position = "absolute";
-  section.style.height = "200px";
-  section.style.width = "200px";
+  section.style.height = h[height];
+  section.style.width = w[width];
+  /*section.style.height = "337.92px";
+  section.style.width = "447.92px";*/
   section.style.backgroundImage = "url('/content/"+ foldername+"/cover.jpg')";
     
   var grid_size = 20;
   
-  $(section)
-  .draggable({ grid: [ grid_size, grid_size ] })
-  .resizable({ grid: grid_size * 2 })
-  .on("mouseover", function(){
+  /*$(section)
+  draggable({ grid: [ grid_size, grid_size ] })
+  resizable({ grid: grid_size * 2 })
+  on("mouseover", function(){
     $( this ).addClass("move-cursor")
   })
   .on("mousedown", function(){
@@ -48,7 +49,9 @@ function GenerateContent(raw, foldername, position) {
       .removeClass("grab-cursor")
       .removeClass("opac")
       .addClass("move-cursor");
-  });
+  });*/
+  
+///////////////////////////////////ANIMATION PAGE PROJET//////////////////////////////////////////////   
   
   $(section).on("click", function(event) {
     var container = event.target;
@@ -101,7 +104,7 @@ var sizeScreenY = 864;
       var div = document.createElement('div');
 
       div.style.backgroundImage = "url('content/totem/totem_1.png')";
-      div.style.indexZ = "0"
+      //div.style.indexZ = "0"
       div.style.backgroundSize = "cover";
       div.style.position = "absolute";
         /*div.style.left = document.body.scrollLeft;
@@ -171,7 +174,7 @@ function isCollide(a, b) {
     
     element.style.left = project.initial.x;
     element.style.top = project.initial.y;
-    //console.log(element);
+    console.log(element);
   }
     
           
@@ -204,7 +207,7 @@ $( function() {
       if (event.target.readyState === XMLHttpRequest.DONE) {
         if (event.target.status === 200) {
           console.log(folders[i]);
-          GenerateContent(event.target.responseText, folders[i], i);
+          GenerateContent(event.target.responseText, folders[i], i, i, i);
         //}
           
         } else {
