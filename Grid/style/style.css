@@ -10,15 +10,16 @@ html{
   height : 2174.77px;
   top:0;
   left:0;
-  overflow: auto;
+  overflow:scroll;
 }
 
 body{
   position:absolute;
-  /*width : 2761px;
+  width : 2761px;
   height : 2174.77px;
   top:0;
-  left:0;*/
+  left:0;
+  overflow:scroll;
   background: url('../content/interface/Grid_Point.png');
   background-repeat: repeat;
 }
