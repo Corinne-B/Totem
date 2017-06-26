@@ -10,7 +10,7 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/Grid/index.html');
 });
 
-app.use(express.static('Grid'));
+app.use(express.static(__dirname + '/Grid'));
 
 //Identifier quand quelqu'un se connecte et se déconnecte
 io.on('connection', function(socket){
@@ -35,7 +35,7 @@ io.on('connection', function(socket){
 var five = require("johnny-five"),
 board, joystickPin2, joystickPin3, joystickPin4, joystickPin5, buttonArcade, buttonRectangle;
 
-board = new five.Board();
+board = new five.Board({ port: "COM4" });
 
 board.on("ready", function() {
 
