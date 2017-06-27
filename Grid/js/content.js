@@ -12,8 +12,8 @@ function GenerateContent(raw, foldername, position, height, width) {
   var title = document.createElement('h2');
   var content = document.createElement('div');
 
-  var posX = [1648.6, 896.67, 209.83, 1559.37, 1586.67, 815, 1656.67];
-  var posY = [1390.17, -24.17, -115, 64.37, 455, 498.33, 838.33];
+  var posX = [1648.6+600, 896.67+600, 209.83+600, 1559.37+600, 1586.67+600, 815+600, 1656.67+600];
+  var posY = [1390.17+600, -24.17+600, -115+600, 64.37+600, 455+600, 498.33+600, 838.33+600];
   var h = [426.33, 88.33, 250, 337.92, 130, 356.67, 243.33];
   var w = [736.12, 433.33, 473.67, 447.92, 413.33, 630, 480];
   //section.style.indexZ = "0"

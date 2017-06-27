@@ -3,20 +3,32 @@
     "description":"<h2></h2>",
     "content":[
       {
-        "html":"<div id='marcheur1' class='marcheur'><h3>RESSOURCES</h3><h5>DÉCOUPEUSE LASER</h5><span>Trotec 3000</span><h5>BOIS</h5><span>Medium 3 mm</span></div>",
+        "html":"<div id='marcheur1' class='marcheur'><h3>RESSOURCES</h3><hr id='titre1' noshade><h5>DÉCOUPEUSE LASER</h5><span>Trotec 3000</span><hr noshade><h5>BOIS</h5><span>Medium 3 mm</span></div>",
         "initial":{"x":560, "y":100}
       },
       {
-        "html":"<div id='marcheur2' class='marcheur'><h3>LICENSE</h3><p>Ce projet peut-être librement réutilisé, à condition<br> de ne pas en faire un usage commerciale et de le<br>repartager dans les même conditions.</p><img src='/content/marcheur/cc.png' alt='cc'></div>",
+        "html":"<div id='marcheur2' class='marcheur'><h3>LICENSE</h3><hr id='titre2' noshade><img src='/content/marcheur/cc.png' alt='cc'><p>Ce projet peut-être librement réutilisé, à condition<br> de ne pas en faire un usage commerciale et de le<br>repartager dans les même conditions.</p></div>",
         "initial":{"x":550, "y":400}
       },
       {
-        "html":"<div id='marcheur3' class='marcheur'><h3>CRÉATEURS</h3><span>Benoît</span><span>Conception de l'objet</span><span>Jérôme</span><span>Découpage et assemblage</span></div>",
+        "html":"<div id='marcheur3' class='marcheur'><h3>CRÉATEURS</h3><hr id='titre3' noshade><h6 class='nom'>Benoît</h6><span class='credit'>Conception de l'objet</span><hr id='lignem3' noshade><h6 class='nom'>Jérôme</h6><span class='credit'>Découpage et assemblage</span></div>",
         "initial":{"x":180, "y":400}
       },
       {
-        "html":"<div id='marcheur4' class='marcheur'><h3>LE PROJET</h3><p><p>Plans pour marcheur type Strandbeest inspiré des<br>travaux de l'artiste Theo Jansen.<br><br>Le plan des pièces pour découpe laser, réalisé sous<br>OpenSCAD, est paramétrable.<br><br>Le projet débutant, le placement de pièces n'est<br>pas optimisé et beaucoup reste à faire. En<br>exportant d'OpenSCAD vers InkScape il est possible<br>de replacer les pièces comme on le souhaite, de supprimer ou d'ajouter des éléments.</p></div>",
+        "html":"<div id='marcheur4' class='marcheur'><h3>LE PROJET</h3><hr id='titre4' noshade><p><p>Plans pour marcheur type Strandbeest inspiré des<br>travaux de l'artiste Theo Jansen.<br><br>Le plan des pièces pour découpe laser, réalisé sous<br>OpenSCAD, est paramétrable.<br><br>Le projet débutant, le placement de pièces n'est<br>pas optimisé et beaucoup reste à faire. En<br>exportant d'OpenSCAD vers InkScape il est possible<br>de replacer les pièces comme on le souhaite, de<br> supprimer ou d'ajouter des éléments.</p></div>",
         "initial":{"x":-300, "y":400}
+      },
+      {
+        "html":"<div id='marcheur5' class='marcheur'><h4>ÉTAPE 1</h4><h5>Paramètres</h5><p id='firstp'>Ne fonctionne pas correctement actuellement, les marges de manœuvres sont<br>faibles. Les mesures sont correctes mais le placement relatif des pièces ne<br>s'adapte pas.</p><h6>Diamètre des axes</h6><p>Diamètre des axes en millimètres. Tous les axes ont le même diamètre.</p><hr class='lstep1' noshade><h6>Diamètre externe des axes</h6><p>Diamètre externe des axes en millimètres. Toutes les jonctions partagent le même<br>diamètre.<br><br>Par défaut, le diamètre externe est fixé à 4 fois le diamètre interne. Il est pratique<br>de conserver une relation entre diamètre des axes et des jonctions en appliquant<br>un coefficient multiplicateur.</p><hr class='lstep2' noshade><h6>Coefficient multiplicateur du modèle</h6><p>Coefficient multiplicateur du plan dans son ensemble.</p><hr class='lstep3' noshade><img src='/content/marcheur/img_step1.png'></div>",
+        "initial":{"x":-300, "y":720}
+      },
+      {
+        "html":"<div id='marcheur6' class='marcheur'><h4>ÉTAPE 2</h4><h5>Export</h5><p>Dans OpenSCAD :</br>1. Menu Fichier > Exporter > Exporter comme DXF... (ou SVG selon).</br>2. Dans la boite de dialogue Exporter DXF Fichier, parcourir les dossier pour</br>sélectionner le dossier de destination puis, modifier le nom du fichier si</br>nécessaire.</br>3. Appuyer sur Enregistrer pour effectuer l'export.</p><img src='/content/marcheur/img_step2.png'></div>",
+        "initial":{"x":-300, "y":1450}
+      },
+      {
+        "html":"<div id='marcheur7' class='marcheur'><h4>ÉTAPE 3</h4><h5>Montage</h5><p>Le plan paramétré tel qu'il est livré est prévu pour être découpé dans du contre </br>plaqué de 10 millimètres avec des axes réalisés en cure-dents de 2,2 mm de dia</br>mètre. Revoir le paramétrage du fichier pour d'autres configurations.</br></br>Pour que le marcheur soit stable il faut à minima 4 pattes - 4 fois le plan.</br></br>Les capuchons servent d'entretoises (si nécessaires) ou de retenues pour les </br>axes. Les éléments qui doivent êtres fixés - axes manivelles et capuchons, le sont</br>par un point de colle cyanoacrylate.</br></br>Les manivelles ayant 4 trous, il faut les monter en décalage pour constituer un</br>système bielle-manivelle.</br></br>Les différentes pièces sont gravées de lettres. Plan de montage en illustration.</br></br>J'ai fixé des cure-dents pour fixer l'écartement des ponts, à vous de voir.</p><img src='/content/marcheur/img_step3.png'></div>",
+        "initial":{"x":-300, "y":1790}
       }
     ]
 }
