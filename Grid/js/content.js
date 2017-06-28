@@ -58,13 +58,17 @@ function GenerateContent(raw, foldername, position, height, width) {
     $(container).toggleClass('active');
     console.log(container);
     if ($(container).hasClass('active')) {
+      $("#signes").addClass('hidden');
       $(".box").addClass('hidden');
       $(container).removeClass('hidden');
       TweenMax.to('.hidden', 0.3, {opacity:0});
-      TweenMax.staggerFromTo('.content > div', 0.2, {opacity:0, y: 100}, {opacity:1, y: 0}, 0.3);
+      TweenMax.staggerFromTo('.content > div', 0.2, {opacity:0, y: 100}, {opacity:1, y: 0}, 0.1);
     } else {
       $(".box").removeClass('hidden');
-      TweenMax.to('.box', 0.3, {opacity:1}); 
+      $("#signes").removeClass('hidden');
+      TweenMax.to('.box', 0.3, {opacity:1});
+      TweenMax.to('#signes', 5.3, {opacity:1});
+      
     } 
   });
 

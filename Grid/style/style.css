@@ -11,6 +11,19 @@ html{
   top:0;
   left:0;
   overflow:scroll;
+  /*background-image:  url('../content/interface/bg_signes.png');*/
+}
+
+#signes{
+  position:absolute;
+  top:612px;
+  left:552px;
+  width : 2761px;
+  height : 2174.77px;
+  z-index: 199;
+  pointer-events:none;
+  
+  
 }
 
 body{
@@ -201,8 +214,8 @@ input:checked < body{
   position:absolute;
   width: 200px;
   height: 200px;
-  left: 1230.45px;
-  top: 1846.53px;
+  left: 1350.45px;
+  top: 1836.53px;
   
 }
   
@@ -234,8 +247,8 @@ input:checked < body{
   position:absolute;
   width: 200px;
   height: 200px;
-  left: 600px;
-  top: 1000.34px;
+  left: 618px;
+  top: 1124.34px;
 }
 
 #solicitation2 span{
