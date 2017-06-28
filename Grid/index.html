@@ -8,8 +8,9 @@
   </head>
   <body>
     <button onclick="disableDraggable()" style ="opacity:0">Click me</button> 
-    <h1>La fabrique d'objets libres</h1>
-    
+    <h1>La fabrique</h1>
+    <img id="signes" class="container" src="../content/interface/bg_signes.png" alt="background signes">
+  
     <div id = "targetJoy"></div>
 
     <article></article>
@@ -72,16 +73,31 @@
       //window.scrollTo( document.body.scrollLeft, document.body.scrollTop + speedScroll );
           //$('html, body').animate({scrollTop:1200},'50');
           TweenMax.to(document.body, 1, {
-            scrollTop : document.body.scrollTop + speedScroll,
+            scrollLeft : document.body.scrollLeft + speedScroll,
             ease : Linear.None
           })
         });
+    socket.on("pin2 : down", function(button){
+      //window.scrollTo( document.body.scrollLeft, document.body.scrollTop - speedScroll );
+      TweenMax.to(document.body, 1, {
+        scrollLeft : document.body.scrollLeft + speedScroll,
+        ease : Linear.None
+      })
+    });
+
 
     //Scroll vers le haut
     socket.on("pin4 : hold", function(button){
       //window.scrollTo( document.body.scrollLeft, document.body.scrollTop - speedScroll );
       TweenMax.to(document.body, 1, {
-        scrollTop : document.body.scrollTop - speedScroll,
+        scrollLeft : document.body.scrollLeft - speedScroll,
+        ease : Linear.None
+      })
+    });
+    socket.on("pin4 : down", function(button){
+      //window.scrollTo( document.body.scrollLeft, document.body.scrollTop - speedScroll );
+      TweenMax.to(document.body, 1, {
+        scrollLeft : document.body.scrollLeft - speedScroll,
         ease : Linear.None
       })
     });
@@ -90,21 +106,42 @@
     socket.on("pin5 : hold", function(button){
       //window.scrollTo( document.body.scrollLeft + speedScroll, document.body.scrollTop );
       TweenMax.to(document.body, 1, {
-        scrollLeft : document.body.scrollLeft + speedScroll,
+        scrollTop : document.body.scrollTop + speedScroll,
         ease : Linear.None
       })
     });
+    socket.on("pin5 : down", function(button){
+      //window.scrollTo( document.body.scrollLeft, document.body.scrollTop - speedScroll );
+      TweenMax.to(document.body, 1, {
+        scrollTop : document.body.scrollTop + speedScroll,
+        ease : Linear.None
+      })
+    });
+
+
     //Scroll vers la gauche
     socket.on("pin3 : hold", function(button){
       //window.scrollTo( document.body.scrollLeft -speedScroll , document.body.scrollTop );
       TweenMax.to(document.body, 1, {
-        scrollLeft : document.body.scrollLeft - speedScroll,
+        scrollTop : document.body.scrollTop - speedScroll,
         ease : Linear.None
       })
     });
+    socket.on("pin3 : down", function(button){
+      //window.scrollTo( document.body.scrollLeft, document.body.scrollTop - speedScroll );
+      TweenMax.to(document.body, 1, {
+        scrollTop : document.body.scrollTop - speedScroll,
+        ease : Linear.None
+      })
+    });
+
     socket.on("buttonArcade : up", function(button){
       //window.scrollTos( document.body.scrollLeft -speedScroll , document.body.scrollTop );
     });
+
+    var key = event.keyCode;
+    console.log(key);
+
 
   });
 
