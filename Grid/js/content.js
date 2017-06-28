@@ -113,8 +113,8 @@ var sizeScreenY = 864;
       div.style.position = "absolute";
         /*div.style.left = document.body.scrollLeft;
         div.style.top = document.body.scrollTop;*/
-        div.style.left = pageXOffset + screen.width/2;
-        div.style.top = pageYOffset + screen.height/2;
+        div.style.left = pageXOffset + screen.width/2 - 10;
+        div.style.top = pageYOffset + screen.height/2 -20;
         div.style.margin = "5px";
         div.style.height = "20px";
         div.style.width = "20px";
@@ -150,8 +150,9 @@ function isCollide(a, b) {
     for (var i = elements.length - 1; i >= 0; i--) {
       var element = elements[i];
       if(isCollide(document.getElementById('targetJoy'), element)){
+        element.click();
         console.log("collision ");
-        console.log(element);
+        console.log('this est égal à =' + this)
       }
     };
   });

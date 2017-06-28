@@ -63,8 +63,8 @@ footer{
   position: fixed;
   display: inline-block;
   top: 85%;
-  width: 26%;
-  height: 100px;
+  width: 24%;
+  height: 105px;
   left: 37%;
   z-index:200;
 }
@@ -121,6 +121,10 @@ h3{
   color: #54CFB3;
   margin-top: 20px;
   margin-left: 15px;
+}
+
+#targetJoy:active{
+  cursor: none;
 }
 
 #titre1{
