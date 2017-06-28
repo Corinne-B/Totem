@@ -3,16 +3,8 @@
     "description":"Un projet d'un vélo électrique",
     "content":[
       {
-        "html":"<div><h3>Description du projet</h3><p>Imprimante 3D entièrement découpée</br> à la Laser.</br></br>Développement à suivre</p></div>",
-        "initial":{"x":550, "y":-20}
-      },
-      {
-        "html":"<div><h3>Crédits</h3><p>Par Admin</br></br>Médéric Droz dit Busset</p></br>Médéric</br></br>Matthieu Borgognon</br>matbgn</div>",
-        "initial":{"x":30, "y":300}
-      },
-      {
-        "html":"<div><h3>Machines et matériaux</h3><p>Découpeuse laser</br>Bois Contre plaqué</p></div>",
-        "initial":{"x":550, "y":300}
+        "html":"<div><img src='/content/hopeandbike/img_handb.png'</div>",
+        "initial":{"x":0, "y":135}
       }
     ]
 }
