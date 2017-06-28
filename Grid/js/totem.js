@@ -1,9 +1,25 @@
 var divMouseDownTimeout;
 var isMouseHeld = false
+var socket = io();
+var randomSign = 1;
+
 $("#main").mousedown(function(e) {
   divMouseDownTimeout = setTimeout(function() {
     isMouseHeld = true
   }, 1000);
+});
+
+socket.on("buttonRectangle : down", funtion(button){
+  randomSign = Math.round(Math.random()*4);
+document.getElementById("targetJoy").style.backgroundImage = "url('content/totem/totem_"+ randomSign +".png')";
+
+});
+
+document.body.addEventListener("click", funtion(){
+  console.log("clique");
+  randomSign = Math.round(Math.random()*4);
+document.getElementById("targetJoy").style.backgroundImage = "url('content/totem/totem_" + randomSign + ".png')";
+
 });
 
 document.body.onclick = appendSign

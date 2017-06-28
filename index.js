@@ -35,7 +35,7 @@ io.on('connection', function(socket){
 var five = require("johnny-five"),
 board, joystickPin2, joystickPin3, joystickPin4, joystickPin5, buttonArcade, buttonRectangle;
 
-board = new five.Board({ port: "COM4" });
+board = new five.Board();
 
 board.on("ready", function() {
 
